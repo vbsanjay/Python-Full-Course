@@ -7,6 +7,7 @@ def name_setter():
     print(last_name)
 
 
+# a function could be called within another function
 def form():
     name_setter()
     department_setter()
@@ -18,3 +19,10 @@ def department_setter():
 
 
 form()
+
+
+def hello(to="world!"):
+    print("hello", to)
+
+
+hello("sanjay")
