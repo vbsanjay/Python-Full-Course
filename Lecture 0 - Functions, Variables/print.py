@@ -29,4 +29,3 @@ print("your first name is", first_name)
 print("your second name is", name_array[1])
 
 
-
