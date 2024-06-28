@@ -182,8 +182,6 @@ print("A", "B", "C", sep="")
 ---
 # Function
 
-Certainly! Here are 10 basic questions about functions in Python, along with their answers:
-
 ## What is a function in Python?
 A function in Python is a block of reusable code that performs a specific task. It can take inputs, process them, and return a result.
 
@@ -259,4 +257,3 @@ add = lambda x, y: x + y
 print(add(2, 3))  # Output: 5
 ```
 
----
