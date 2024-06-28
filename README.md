@@ -1,0 +1,1 @@
+This repository has everything you need to learn Python coding thoroughly, from basics to advanced skills.
