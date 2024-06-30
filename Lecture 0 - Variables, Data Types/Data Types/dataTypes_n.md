@@ -40,3 +40,6 @@ if a:
 else:
     print("a is False")
 ```
+
+## What is the purpose of the None data type in Python?
+- None represents the absence of a value or a null value. It is often used to signify that a variable has no value or to initialize a variable.
