@@ -73,6 +73,15 @@ age = [20, 21, 22, 28]
 mydict = dict(zip(names, age)) # duplicates are taken care by python itself
 print(mydict) # output: {'Arjun': 21, 'Sanjay': 22, 'Vijay': 28} 
 
+# Keys View (dict_keys)
 my_dict = {"a": 1, "b": 2, "c": 3}
 keys_view = my_dict.keys()
 print(keys_view)  # Output: dict_keys(['a', 'b', 'c'])
+
+# Values View (dict_values)
+values_view = my_dict.values()
+print(values_view)  # Output: dict_values([1, 2, 3])
+
+# Items View (dict_items)
+items_view = my_dict.items()
+print(items_view)  # Output: dict_items([('a', 1), ('b', 2), ('c', 3)])
