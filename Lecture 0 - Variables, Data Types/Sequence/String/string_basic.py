@@ -45,3 +45,11 @@ a multi-line
 string."""
 print(multi_line_str)
 
+# string Concatenation
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+
+
+
