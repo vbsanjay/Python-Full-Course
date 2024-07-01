@@ -50,3 +50,16 @@ list1 = ["abc", 34, True, 40, "male"]
 thislist = ["apple", "banana", "cherry"]
 thislist.pop(1)
 print(thislist)
+
+# Add 2 list
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+list1.extend(list2)
+print(list1)
+
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+print(list3)
