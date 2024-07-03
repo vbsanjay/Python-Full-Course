@@ -32,14 +32,14 @@ This repository has everything you need to learn Python coding thoroughly, from 
 1. Conditionals
 
 ## Lecture 3 - Bitwise Operators
-1. bitwise_operator: yet to complete
+1. bitwise_operator
 
 ## Lecture 4 - Loops
 1. loops: yet to complete
 
 ## Lecture 5 - Function
-1. function: yet to complete
-2. lamda: yet to complete
+1. function
+2. lamda
 
 ## Lecture 6 - Numpy
 
