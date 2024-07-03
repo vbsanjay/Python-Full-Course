@@ -44,6 +44,9 @@ This repository has everything you need to learn Python coding thoroughly, from 
 ## Lecture 6 - Numpy
 
 ## Lecture 7 - Filter, Map, Reduce
+1. map
+2. filter
+3. Reduce
 
 ## Lecture 8 - Decorators
 
