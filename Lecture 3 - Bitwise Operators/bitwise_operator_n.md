@@ -159,3 +159,94 @@ print(f"Header: {header}, Flags: {flags}, Payload: {payload}")
 ```
 
 Using bitwise operations in such scenarios can significantly reduce the computational overhead compared to using higher-level operations, making the code more efficient, especially when dealing with large volumes of data or requiring real-time processing.
+
+## Pitfalls in Bitwise Operations
+
+1. **Negative Numbers Handling:**
+   - **Pitfall:** Bitwise operations on negative numbers can be confusing due to Python's use of two's complement representation for signed integers.
+   - **Example:**
+     ```python
+     x = -10
+     result = x >> 2  # This can yield unexpected results if not understood properly
+     ```
+
+2. **Integer Size Assumptions:**
+   - **Pitfall:** Assuming a fixed integer size can lead to incorrect results, especially when shifting bits.
+   - **Example:**
+     ```python
+     x = 1
+     result = x << 40  # May cause an overflow in some programming languages, but Python handles large integers
+     ```
+
+3. **Misunderstanding Sign Extension:**
+   - **Pitfall:** Not understanding how right shifts handle sign bits can lead to incorrect results.
+   - **Example:**
+     ```python
+     x = -1  # 111...111 in binary
+     result = x >> 1  # Remains 111...111 in Python
+     ```
+
+4. **Operator Precedence:**
+   - **Pitfall:** Forgetting operator precedence rules can lead to unexpected results.
+   - **Example:**
+     ```python
+     x = 1
+     y = 2
+     result = x << y + 1  # Misinterpretation: (x << y) + 1 instead of x << (y + 1)
+     ```
+
+### Best Practices in Bitwise Operations
+
+1. **Use Parentheses for Clarity:**
+   - **Practice:** Always use parentheses to make the order of operations explicit.
+   - **Example:**
+     ```python
+     x = 1
+     y = 2
+     result = x << (y + 1)  # Correct and clear
+     ```
+
+2. **Handle Negative Numbers Explicitly:**
+   - **Practice:** Be explicit when performing bitwise operations on negative numbers to avoid confusion.
+   - **Example:**
+     ```python
+     x = -10
+     result = (x & 0xFF) >> 2  # Masking to ensure positive result for right shift
+     ```
+
+3. **Use Constants for Bitmasks:**
+   - **Practice:** Define constants for bitmasks to improve readability and maintainability.
+   - **Example:**
+     ```python
+     BITMASK = 0x1F  # 0001 1111
+     x = 10
+     result = x & BITMASK
+     ```
+
+4. **Comments and Documentation:**
+   - **Practice:** Comment your code to explain the purpose of bitwise operations, especially if they are non-trivial.
+   - **Example:**
+     ```python
+     x = 10
+     bit_position = 1
+     bitmask = 1 << bit_position
+     result = x | bitmask  # Setting the bit at position 1
+     ```
+
+5. **Use Descriptive Variable Names:**
+   - **Practice:** Use descriptive names for variables to indicate their purpose.
+   - **Example:**
+     ```python
+     data = 0b11001010
+     header_mask = 0xF0  # Mask for the header bits
+     header = (data & header_mask) >> 4
+     ```
+
+6. **Test Thoroughly:**
+   - **Practice:** Test your bitwise operations thoroughly, especially edge cases and with both positive and negative numbers.
+   - **Example:**
+     ```python
+     def test_bitwise_operations():
+         assert (10 & 2) == 2
+         assert (-10 >> 2) == -3  # Ensure your expectations align with Python's behavior
+     ```
