@@ -1,4 +1,3 @@
-
 # Write a lambda function to add 10 to a given number
 add_ten = lambda x: x + 10
 print(add_ten(5))  # Output: 15
