@@ -70,8 +70,12 @@ print(mydict["age"][0])
 # Creating a dict with 2 list
 names =["Arjun", "Arjun", "Sanjay", "Vijay"]
 age = [20, 21, 22, 28]
+zipped = zip(names, age) # zip returns an iterator
+# Convert the zip object to a list to print its content
+zipped_list = list(zipped)
+print("Zipped List:", zipped_list)
 mydict = dict(zip(names, age)) # duplicates are taken care by python itself
-print(mydict) # output: {'Arjun': 21, 'Sanjay': 22, 'Vijay': 28} 
+print("Dictionary:", mydict) # output: {'Arjun': 21, 'Sanjay': 22, 'Vijay': 28} 
 
 # Keys View (dict_keys)
 my_dict = {"a": 1, "b": 2, "c": 3}
