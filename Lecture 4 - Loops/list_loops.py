@@ -49,3 +49,24 @@ while True:
         print(item)  # Prints each item in the list
     except StopIteration:
         break  # Exit the loop when iterator is exhausted
+
+
+#9. For loop with else statement
+print("\nFor loop with else statement:")
+for i in range(7):
+    print(i, end = " ")
+    if i == 8:
+        break
+else:
+    print("All numbers were printed")
+
+# 10. While loop with else Statement
+print("\nWhile loop with else statement:")
+temp = 1
+while(temp < 10):
+    print(temp)
+    if(temp % 3 == 0):
+        pass
+    temp += 1
+else:
+    print("No break statement executed")
