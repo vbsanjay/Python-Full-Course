@@ -88,6 +88,7 @@ print(c)
 
 print(div(10,2)) # 5
 print(c) # {'adder': 3, 'mult': 2}
+print(div.__name__)
 # now you can have the name of variable as same a function and observe how it works
 
 div = counter(div,c)
@@ -96,3 +97,4 @@ div = counter(div,c)
 
 print(div(10,2)) # 5
 print(c) # {'adder': 3, 'mult': 2, 'div': 1}
+print(div.__name__)
