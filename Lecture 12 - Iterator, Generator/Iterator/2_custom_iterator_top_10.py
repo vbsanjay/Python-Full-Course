@@ -18,12 +18,13 @@ class TopTen:
         
 
 it = TopTen()
-
+print("using for loop")
 for i in it:
     print(i)
 
 it = TopTen()
 
+print("using while loop")
 while True:
     try:
         print(it.__next__())
@@ -58,4 +59,6 @@ if __name__ == '__main__' :
         print ("Eating more Pizzas, counting ", i, end ="\n")
     
     print ("\nPrint the range using iter()\n")
+
+
     
