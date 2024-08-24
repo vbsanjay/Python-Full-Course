@@ -60,12 +60,22 @@ class SharedResourceThread(threading.Thread):
         # Each thread will try to increment the counter 100,000 times
         for _ in range(100000):
             # Simulate some work with a tiny sleep to increase the chance of context switching
-            with SharedResourceThread.lock:  # Use a single lock shared by all threads
-                step = 1
-                time.sleep(0.00001)
-                temp_res = SharedResourceThread.counter + step
-                time.sleep(0.00001)
-                SharedResourceThread.counter = temp_res
+            # with SharedResourceThread.lock:  # Use a single lock shared by all threads
+            #     step = 1
+            #     time.sleep(0.00001)
+            #     temp_res = SharedResourceThread.counter + step
+            #     time.sleep(0.00001)
+            #     SharedResourceThread.counter = temp_res
+            
+            # lock without using 'with'
+            SharedResourceThread.lock.acquire()
+            step = 1
+            time.sleep(0.00001)
+            temp_res = SharedResourceThread.counter + step
+            time.sleep(0.00001)
+            SharedResourceThread.counter = temp_res
+            SharedResourceThread.lock.release()
+
 
 # Create two threads
 thread1 = SharedResourceThread("Thread-1")
