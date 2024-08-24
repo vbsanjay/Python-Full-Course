@@ -1,22 +1,3 @@
-# num1 = 10
-# num2 = 0
-# try:
-#     res = num1 / num2
-#     print(res)
-# except ZeroDivisionError as e:
-#     print(e)
-
-
-# def check_positive(number):
-#     try:
-#         if number < 0:
-#             raise ValueError("Negative number!")
-#     except ValueError as e:
-#         print(f"Caught an exception: {e}")
-#         raise  # Re-raises the caught exception
-
-# check_positive(-1)
-
 class CustomError(Exception):
     """Base class for custom exceptions."""
     def __init__(self, message="Something went wrong"):
